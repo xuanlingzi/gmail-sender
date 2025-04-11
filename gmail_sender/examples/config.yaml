@@ -1,0 +1,40 @@
+application:
+  name: 'Gmail Sender'
+  version: 0.1.0
+  level: info
+  gmail: true
+  interval: 2
+  retries: 3
+
+# 邮件模版
+template:
+  subject: '10%OFF for you!'
+  body: 10%OFF.html
+  attachment:
+
+# 路径
+path:
+  attachment: ./attachments/
+  name: ./emails/
+  template: ./templates/
+  credential: ./credentials/
+  log: ./logs/
+
+# 邮件配置
+list:
+  to: new.txt
+  sent: sent.txt
+  failed: failed.txt
+
+# 邮件服务器配置
+smtp:
+  ssl: false
+  host: smtp.gmail.com
+  port: 587
+  username: your.name@domain.com
+  password: your.password
+
+# Gmail API 凭证
+gmail:
+  username: your.name@gmail.com
+  credential: credentials.json
